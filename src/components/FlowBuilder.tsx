@@ -71,12 +71,9 @@ const FlowBuilder = () => {
     // === Handle Connection Between Nodes ===
     const onConnect: OnConnect = useCallback(
         (params) => {
-            const alreadyConnected = edges.some((e) => e.source === params.source);
-            if (alreadyConnected) return;
-
             setEdges((prevEdges) => addEdge(params, prevEdges));
         },
-        [edges, setEdges]
+        [setEdges]
     );
 
     // === Handle Drop from Side Panel ===

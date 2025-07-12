@@ -31,7 +31,6 @@ const NodesPanel = () => {
                             <li>Connect nodes using handles</li>
                             <li>
                                 Select a node or edge and press{' '}
-                                <kbd className="px-1 py-0.5 border rounded text-xs">Backspace</kbd> or{' '}
                                 <kbd className="px-1 py-0.5 border rounded text-xs">Delete</kbd> to remove
                             </li>
                         </ul>
