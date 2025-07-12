@@ -1,7 +1,12 @@
+import { ReactFlowProvider } from "@xyflow/react"
+import FlowBuilder from "./components/FlowBuilder"
 
 const App = () => {
   return (
-    <div>App</div>
+    <ReactFlowProvider>
+      <FlowBuilder />
+    </ReactFlowProvider>
+
   )
 }
 
