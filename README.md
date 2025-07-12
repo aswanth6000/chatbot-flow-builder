@@ -2,7 +2,7 @@
 
 A visual drag-and-drop interface to build chatbot flows using [@xyflow/react (React Flow)](https://reactflow.dev/). Users can create, connect, and configure custom nodes to design conversational experiences.
 
-![Chatbot Flow Builder Screenshot](<[https://res.cloudinary.com/dpqpclkby/image/upload/v1752309568/83a728df-56b7-4fb9-aba6-ce1f723b8ab4.png](https://res.cloudinary.com/dpqpclkby/image/upload/v1752309568/83a728df-56b7-4fb9-aba6-ce1f723b8ab4.png)>)
+![Chatbot Flow Builder Screenshot](https://res.cloudinary.com/dpqpclkby/image/upload/v1752309568/83a728df-56b7-4fb9-aba6-ce1f723b8ab4.png)
 
 ## 📹 Preview
 
