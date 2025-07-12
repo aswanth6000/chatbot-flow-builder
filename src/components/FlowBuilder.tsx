@@ -44,7 +44,7 @@ const FlowBuilder = () => {
     // === Delete Selected Nodes/Edges on Keyboard Press ===
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            if (e.key !== 'Backspace' && e.key !== 'Delete') return;
+            if (e.key !== 'Delete') return;
 
             // Delete selected nodes
             setNodes((prevNodes) => {
