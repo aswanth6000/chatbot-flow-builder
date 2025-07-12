@@ -1,69 +1,103 @@
-# React + TypeScript + Vite
+# 🤖 Chatbot Flow Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A visual drag-and-drop interface to build chatbot flows using [@xyflow/react (React Flow)](https://reactflow.dev/). Users can create, connect, and configure custom nodes to design conversational experiences.
 
-Currently, two official plugins are available:
+![Chatbot Flow Builder Screenshot](<[https://res.cloudinary.com/dpqpclkby/image/upload/v1752309568/83a728df-56b7-4fb9-aba6-ce1f723b8ab4.png](https://res.cloudinary.com/dpqpclkby/image/upload/v1752309568/83a728df-56b7-4fb9-aba6-ce1f723b8ab4.png)>)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📹 Preview
 
-## Expanding the ESLint configuration
+![Preview GIF](https://res.cloudinary.com/dpqpclkby/image/upload/v1752310464/Vite_React_TS_-_Google_Chrome_2025-07-12_14-04-27.mp4_tmisgo.gif)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- 📌 Drag and drop custom nodes onto the canvas
+- 🔗 Connect nodes visually
+- 📝 Edit node labels/messages
+- 🗑️ Delete selected nodes/edges with `Delete`
+- 📂 Save button for exporting or processing flows
+- 🧙‍♂️ Extendable node system via a central registry
+- 🧘‍🎨 Built with TailwindCSS + ShadCN UI for clean UI
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🧪 Tech Stack
+
+- **React** with **TypeScript**
+- **@xyflow/react** (React Flow)
+- **Tailwind CSS**
+- **ShadCN UI**
+- **Lucide Icons**
+- **Sonner Toasts**
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/yourusername/chatbot-flow-builder.git
+cd chatbot-flow-builder
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn install
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+
+### 3. Run Locally
+
+```bash
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
+
+```
+
+---
+
+## [📂 View Folder Structure](./FOLDER_STRUCTURE.md)
+
+## 🧱 Custom Node System
+
+To add new nodes:
+
+1.  Edit `NodeRegistry.ts`
+2.  Provide:
+
+    - `label`
+    - `component`
+    - `defaultData`
+
+```ts
+export const NODE_TYPES = {
+  text: {
+    label: "Text Message",
+    component: TextNode,
+    defaultData: { label: "Hi there!" }
+  },
+  ...
+};
+
+```
+
+---
+
+## 🤝 Acknowledgements
+
+Thanks to:
+
+- [React Flow (xyflow)](https://reactflow.dev/)
+- [ShadCN UI](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
